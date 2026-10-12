@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+h1 {
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+.status-board {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 15px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.status-item span {
+  color: #e74c3c;
+}
+#game-container {
+  position: relative;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+#grid {
+  display: grid;
+  grid-template-columns: repeat(8, 55px);
+  grid-template-rows: repeat(8, 55px);
+  gap: 8px;
+  position: relative;
+}
+.cell {
+  width: 55px;
+  height: 55px;
+  background-color: #ffeae8;
+  border: 2px solid #ffb8b0;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #c0392b;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.cell .icon {
+  font-size: 16px;
+  line-height: 1;
+}
+.cell.selected {
+  background-color: #ff7675;
+  color: white;
+  border-color: #d63031;
+  transform: scale(1.05);
+}
+.cell.removed {
+  visibility: hidden;
+}
+#selection-box {
+  position: absolute;
+  border: 2px dashed #e74c3c;
+  background-color: rgba(231, 76, 60, 0.2);
+  pointer-events: none;
+  display: none;
+  border-radius: 8px;
+}
+.controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background 0.2s;
+}
+button:hover {
+  background-color: #c0392b;
+}

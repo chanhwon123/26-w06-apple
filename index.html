@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🍎 사과게임 (합이 10 만들기)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🍎 사과게임</h1>
+
+  <div class="status-board">
+    <div class="status-item">제한시간: <span id="timer">120</span>초</div>
+    <div class="status-item">현재 점수: <span id="score">0</span>점</div>
+    <div class="status-item">최고 점수: <span id="high-score">0</span>점</div>
+  </div>
+
+  <div id="game-container">
+    <div id="grid"></div>
+    <div id="selection-box"></div>
+  </div>
+
+  <div class="controls">
+    <button onclick="startGame()">새 게임 시작</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
